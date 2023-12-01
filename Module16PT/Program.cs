@@ -5,6 +5,8 @@ class Program
 {
     private static string watchedDirectory;
     private static string logFilePath;
+    private static NotifyFilters filters;
+    private static bool isRecursive;
 
     static void Main(string[] args)
     {
@@ -51,8 +53,8 @@ class Program
 
         using (var watcher = new FileSystemWatcher(watchedDirectory))
         {
-            watcher.IncludeSubdirectories = true;
-            watcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.DirectoryName;
+            watcher.IncludeSubdirectories = isRecursive;
+            watcher.NotifyFilter = filters;
             watcher.Changed += OnFileChanged;
             watcher.Created += OnFileCreated;
             watcher.Deleted += OnFileDeleted;
@@ -103,6 +105,11 @@ class Program
         Console.WriteLine("\nConfigure Settings:");
         watchedDirectory = GetStringInput("Enter the directory to watch: ");
         logFilePath = GetStringInput("Enter the log file path: ");
+
+        Console.WriteLine("Filtering Options:");
+        filters = GetNotifyFiltersFromUser();
+
+        isRecursive = GetRecursiveOptionFromUser();
     }
 
     private static string GetStringInput(string prompt)
@@ -121,5 +128,28 @@ class Program
             Console.Write(prompt);
         }
         return value;
+    }
+
+    private static NotifyFilters GetNotifyFiltersFromUser()
+    {
+        NotifyFilters result = NotifyFilters.FileName;
+        Console.WriteLine("Select filtering options:");
+        Console.WriteLine("1. FileName");
+        Console.WriteLine("2. DirectoryName");
+        int choice = GetIntegerInput("Enter your choice (1/2): ");
+
+        if (choice == 1)
+        {
+            result |= NotifyFilters.DirectoryName;
+        }
+
+        return result;
+    }
+
+    private static bool GetRecursiveOptionFromUser()
+    {
+        Console.Write("Enable recursive tracking? (Y/N): ");
+        string input = Console.ReadLine();
+        return input.Equals("Y", StringComparison.OrdinalIgnoreCase);
     }
 }

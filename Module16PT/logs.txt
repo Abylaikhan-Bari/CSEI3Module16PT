@@ -1,0 +1,8 @@
+01.12.2023 15:27:24 - File Created: C:\Users\Abylaikhan Bari\Desktop\CSEI\New Text Document.txt
+01.12.2023 15:27:27 - File Renamed: C:\Users\Abylaikhan Bari\Desktop\CSEI\New Text Document.txt to C:\Users\Abylaikhan Bari\Desktop\CSEI\NEW.txt
+01.12.2023 15:33:06 - File Created: C:\Users\Abylaikhan Bari\Desktop\CSEI\New folder
+01.12.2023 15:33:15 - File Renamed: C:\Users\Abylaikhan Bari\Desktop\CSEI\New folder to C:\Users\Abylaikhan Bari\Desktop\CSEI\Jana
+01.12.2023 15:34:34 - File Created: C:\Users\Abylaikhan Bari\Desktop\CSEI\New Text Document.txt
+01.12.2023 15:34:42 - File Renamed: C:\Users\Abylaikhan Bari\Desktop\CSEI\New Text Document.txt to C:\Users\Abylaikhan Bari\Desktop\CSEI\Jap-Jana.txt
+01.12.2023 15:35:24 - File Created: C:\Users\Abylaikhan Bari\Desktop\CSEI\Студенттер.docx
+01.12.2023 15:36:41 - File Created: C:\Users\Abylaikhan Bari\Desktop\CSEI\mongodb-database-tools-windows-x86_64-100.9.3 (1).zip
